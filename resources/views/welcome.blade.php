@@ -71,25 +71,13 @@
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
                     @endauth
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel on Cloudways
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://community.cloudways.com/">Community</a>
-                    <a href="https://www.cloudways.com/blog/laravel/">Blog</a>
-                    <a href="https://www.cloudways.com/en/laravel-faqs.php">FAQ</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    YouthBeat Admin
                 </div>
             </div>
         </div>
