@@ -15,6 +15,13 @@ class CreateStudentRegistersTable extends Migration
     {
         Schema::create('student_registers', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('email');
+            $table->string('college');
+            $table->integer('year');
+            $table->integer('city');
+            $table->integer('phone_no');
+            $table->boolean('is_permitted_for_future_communication');
             $table->timestamps();
         });
     }
