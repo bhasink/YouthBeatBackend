@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Internship;
 
 class InternshipContact extends Model
 {
@@ -26,4 +27,9 @@ class InternshipContact extends Model
         'additional_answer_5',
         'is_permitted_for_future_communication'
     ];
+
+    public function Internship(){
+        return $this->hasOne(Internship::class,'id','internship_id');
+    }
+
 }

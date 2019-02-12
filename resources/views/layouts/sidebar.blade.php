@@ -32,6 +32,23 @@
                 </ul>
             </li>
 
+            <li><a><i class="fa fa-home"></i> Internship <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="{{url('/internship/list')}}">List</a></li>
+                    <li><a href="{{url('/internship/create')}}">Create</a></li>
+                    <li><a href="{{url('/internship/featured-internship')}}">Featured internship</a></li>
+                </ul>
+            </li>
+
+            <li><a><i class="fa fa-home"></i> Leads <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="{{url('/corporate-register')}}">Corporates</a></li>
+                    <li><a href="{{url('/student-register')}}">Students</a></li>
+                    <li><a href="{{url('/internship-register')}}">All Internships</a></li>
+                    <li><a href="{{url('/selective-internship-register')}}">Selective Internships</a></li>
+                </ul>
+            </li>
+
         </ul>
     </div>
 

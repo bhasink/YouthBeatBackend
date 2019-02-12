@@ -5,13 +5,17 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\Category;
 use App\City;
+use App\Traits\Orderable;
 
 class Internship extends Model
 {
+    use Orderable;
+    
     protected $fillable = [
         'category_id',
         'city_id',
         'title',
+        'slug',
         'internship_logo',
         'internship_start_date',
         'internship_end_date',
@@ -34,10 +38,14 @@ class Internship extends Model
     ];
 
     public function category(){
-        return $this->belongsTo('App\Category');
+        return $this->belongsTo(Category::class);
     }
 
     public function city(){
-        return $this->belongsTo('App\City');
+        return $this->belongsTo(City::class);
+    }
+
+    public function scopeSlug($query,$slug){
+        $query->where('slug','=',$slug);
     }
 }

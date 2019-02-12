@@ -13,6 +13,6 @@ class City extends Model
     ];
 
     public function internship(){
-        return $this->hasMany('App\Internship');
+        return $this->hasMany(Internship::class);
     }
 }
